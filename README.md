@@ -54,16 +54,16 @@ To view the portfolio locally:
 ## Screenshots
 
 ### Navigation Bar
-![Navigation Bar](path/to/your/navigation-bar-screenshot.png)
+![Navigation Bar](html_finalprojimages/navi_bar.png)
 
 ### About Me Section
-![About Me](path/to/your/about-me-screenshot.png)
+![About Me](html_finalprojimages/about-me-screenshot.png)
 
 ### Skills Section
-![Skills](path/to/your/skills-screenshot.png)
+![Skills](html_finalprojimages/skills-screenshot.png)
 
 ### Certifications Section
-![Certifications](path/to/your/certifications-screenshot.png)
+![Certifications](html_finalprojimages/certifications-screenshot.png)
 
 *(Replace the placeholders with the actual paths to your screenshots)*
 
