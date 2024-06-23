@@ -65,7 +65,6 @@ To view the portfolio locally:
 ### Certifications Section
 ![Certifications](html_finalprojimages/certifications-screenshot.png)
 
-*(Replace the placeholders with the actual paths to your screenshots)*
 
 ## Contact
 
