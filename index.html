@@ -1,11 +1,16 @@
-<!DOCTYPE html>
-<html>
+﻿<!DOCTYPE html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Yu-Ju Chen - Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./style.css"/>
-  <script src="./script.js"></script>
+  <script src="./script.js" defer></script>
 </head>
-<body>
+<body id="top">
   <!-- Navigation Bar -->
   <nav>
     <div id="home">
@@ -43,7 +48,7 @@
   </nav>
 
   <!-- About Me -->
-  <section id="about-me" class="container">
+  <section id="about-me" class="container reveal">
     <div class="image-container">
       <img src="html_finalprojimages/personal_photo.png" class="profile_image"/>
       <p class="image-description">CANCOM Conference in University of Ottawa, 2017</p>
@@ -53,7 +58,7 @@
           Hi, I'm Yu-Ju Chen! <img src="html_finalprojimages/waving-hand.png" width="40px"/>
         </h1>
         <p>
-          I am a Senior Engineer with a Master’s degree from National Taiwan University and over eight years of FEA experience in microelectronics packaging and consumer product.
+          I am a Senior Engineer with a Master's degree from National Taiwan University and over eight years of FEA experience in microelectronics packaging and consumer product.
           Currently at MediaTek, focusing on thermomechanical reliability predictions and risk assessments for ASIC CoWoS / EMIB packaging (mass production and next-gen designs).
           Previous expertise includes 3DIC and Chip-Package Interaction simulation at tsmc.
           Bringing strong capabilities in mechanical drop/shock simulation and workflow automation, having developed an Auto Drop Test Simulation Toolkit using Python at WNC.
@@ -63,9 +68,8 @@
   </section>
 
   <!-- Skills -->
-  <section id="skills">
+  <section id="skills" class="reveal">
     <h2>Skills</h2>
-    <div style="clear:both;"></div>
     <div class="all_skills">
       <div class="skill">
         <h6>Finite Elements Analysis</h6>
@@ -73,16 +77,16 @@
       </div>
       <div class="skill">
         <h6>Multiple FEA Tools Skill</h6>
-        <p>Proficient in FEA software including HyperWorks, Optistruct, LS-DYNA, Abaqus, and ANSYS APDL.</p>
+        <p>Proficient in FEA software including HyperWorks, Optistruct, LS-DYNA, Abaqus, and ANSYS APDL.</p>    
       </div>
       <div class="skill">
         <h6>Automation Script Development</h6>
         <p>Skilled in developing automation scripts using Python and tcl/tk to optimize simulation workflows.</p>
-      </div>  
+      </div>
       <div class="skill">
         <h6>Cross-disciplinary Collaboration</h6>
         <p>Experienced in collaborating with EE, Antenna System, and ID design teams to achieve project goals.</p>
-      </div>  
+      </div>
       <div class="skill">
         <h6>Academic and Practical Integration</h6>
         <p>Combines strong academic background with practical experience, holding multiple certifications in semiconductor packaging and generative AI API.</p>
@@ -91,31 +95,27 @@
   </section>
 
   <!-- Projects -->
-  <section id="achievements" class="achievements-container">
+  <section id="achievements" class="achievements-container reveal">
     <h2>Achievements</h2>
-    <div style="clear:both;"></div>
     <div class="achievement-card">
       <h3>Auto Drop Test Simulation Toolkit</h3>
       <ul>
         <li>Developing an auto drop test simulation toolkit for Package Design Team</li>
         <li>
-          Presentation on "二次開發應用於紙塑包材自動落摔分析" at LS-DYNA Tech Forum 2023 UGM 
+          Presentation on "自動落摔模擬分析工具開發與應用" at LS-DYNA Tech Forum 2023 UGM
           <a href="https://youtu.be/-gO_5UqO44A?si=T2YXFamGiX3cikfN" target="_blank">Watch Here</a>
         </li>
       </ul>
     </div>
   </section>
 
-  <div style="clear:both;"></div>
-
   <!-- Experience -->
-  <section id="experience">
+  <section id="experience" class="reveal">
     <h2>Experience</h2>
-    <div style="clear:both;"></div>
     <div class="all_experience" id="all_experience">
       <div class="experience">
         <h3>Senior Engineer</h3>
-        <p>MediaTek, Hsinchu Taiwan (Dec. 2024 – Present)</p>
+        <p>MediaTek, Hsinchu Taiwan (Dec. 2024 - Present)</p>
         <ul>
           <li>Focus on advanced packaging technologies (CoWoS, EMIB) and perform thermo-mechanical simulations</li>
           <li>Conduct risk assessment and provide design recommendations for ASIC projects</li>
@@ -125,7 +125,7 @@
       </div>
       <div class="experience">
         <h3>Technical Supervisor</h3>
-        <p>Wistron NeWeb Corporation, Hsinchu Taiwan (March 2023 – Dec. 2024)</p>
+        <p>Wistron NeWeb Corporation, Hsinchu Taiwan (March 2023 - Dec. 2024)</p>
         <ul>
           <li>Structural Analysis for Networking/Communication Products</li>
           <li>PCB SMT Reflow Warpage Assessment</li>
@@ -136,7 +136,7 @@
       </div>
       <div class="experience">
         <h3>Senior Simulation Engineer</h3>
-        <p>Taiwan Semiconductor Manufacturing Company, Hsinchu Taiwan (April 2022 – March 2023)</p>
+        <p>Taiwan Semiconductor Manufacturing Company, Hsinchu Taiwan (April 2022 - March 2023)</p>
         <ul>
           <li>3DIC Package Simulation</li>
           <li>Component Level Reliability simulation</li>
@@ -148,7 +148,7 @@
       </div>
       <div class="experience">
         <h3>Section Manager</h3>
-        <p>Tron Future Tech, Hsinchu Taiwan (May 2020 – April 2022)</p>
+        <p>Tron Future Tech, Hsinchu Taiwan (May 2020 - April 2022)</p>
         <ul>
           <li>Mechanical structure design</li>
           <li>Executing system level structural simulation</li>
@@ -160,7 +160,7 @@
       </div>
       <div class="experience">
         <h3>Senior CAE Structural Analysis Engineer</h3>
-        <p>Wistron NeWeb Corporation, Hsinchu Taiwan (Oct. 2017 – April 2020)</p>
+        <p>Wistron NeWeb Corporation, Hsinchu Taiwan (Oct. 2017 - April 2020)</p>
         <ul>
           <li>Static & Dynamic analysis for networking/communication products by finite element analysis (FEA)</li>
           <li>Providing advice for mechanical design engineer in developing process</li>
@@ -173,9 +173,8 @@
   </section>
 
   <!-- Certificates -->
-  <section id="certificates">
+  <section id="certificates" class="reveal">
     <h2>Certificates</h2>
-    <div style="clear:both;"></div>
     <div class="all_certificates" id="all_certificates">
       <div class="certificate">
         <h3>Machine Learning Specialization</h3>
@@ -205,18 +204,10 @@
     </div>
   </section>
 
-  <div class="iconbutton">
-    <a href="#home">
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="white" width="63px">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M15 11.25l-3-3m0 0l-3 3m3-3v7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-      </svg>
-    </a>
-  </div>
-
-  <div class="popup" id="popup" class="flex_center">
-    <img src="html_finalprojimages/checkmark--outline.svg"/>
-    <h3>Thanks for viewing my experience!</h3>
-    <button onclick="showPopup(false)">Ok</button>
+  <div class="iconbutton" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="white" width="40px">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M15 11.25l-3-3m0 0l-3 3m3-3v7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+    </svg>
   </div>
 </body>
 </html>

@@ -1,2 +1,17 @@
-// 如果有其他功能，請在這裡添加
-// 例如導航欄或滾動效果的腳本
+﻿// Reveal elements on scroll
+function reveal() {
+  var reveals = document.querySelectorAll(".reveal");
+  for (var i = 0; i < reveals.length; i++) {
+    var windowHeight = window.innerHeight;
+    var elementTop = reveals[i].getBoundingClientRect().top;
+    var elementVisible = 150;
+    if (elementTop < windowHeight - elementVisible) {
+      reveals[i].classList.add("active");
+    }
+  }
+}
+
+window.addEventListener("scroll", reveal);
+
+// Initial check
+document.addEventListener("DOMContentLoaded", reveal);

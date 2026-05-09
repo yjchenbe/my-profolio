@@ -1,345 +1,317 @@
-body {
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+﻿:root {
+  --primary-color: #004bbc;
+  --secondary-color: #003399;
+  --text-color: #333;
+  --light-gray: #f9f9f9;
+  --white: #ffffff;
+  --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  --transition: all 0.3s ease;
 }
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  color: var(--text-color);
+  line-height: 1.6;
+  margin: 0;
+  overflow-x: hidden;
+}
+
 /* Navigation Bar */
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+}
+
 #home {
-  background-color: #004bbc;
-  padding: 20px;
-  margin: -1cm -1cm 0 -1cm;
+  background-color: var(--primary-color);
+  padding: 15px 5%;
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
-  min-height: 120px;
-  padding-bottom: 0px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
 }
 
-/* 左側的個人信息 */
 .profile_name {
-  padding-left: 2cm;
-  font-size: 25px;
-  color: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: 100%;
-  margin: 0;
+  color: var(--white);
+  font-size: 24px;
+  font-weight: 700;
 }
 
 .profile_name .contact_info {
-  font-size: 15px;
-  font-style: italic;
+  font-size: 14px;
+  font-weight: 400;
   display: flex;
   align-items: center;
   margin-top: 5px;
 }
 
-.contact_info img {
-  width: 20px;
-  margin-right: 10px;
-}
-
-/* 右側的導航連結 */
-.nav-links {
-  display: flex;
-  align-items: center;
-  margin-right: 2cm;
-}
-
-.nav-links .topdiv {
-  margin: 0 10px;
-}
-
-.topmenu {
-  color: lightgray;
-  font-size: 24px;
-  padding: 10px;
-  text-decoration: none;
-}
-
-.topmenu:hover {
-  color: white;
-  font-weight: bolder;
-  text-decoration: underline;
-  background-color: #003399;
-  border-radius: 5px;
-}
-
-/* LinkedIn Profile Link */
 .profile_name .contact_info a {
-  color: lightgray;
+  color: var(--white);
   text-decoration: none;
   display: flex;
   align-items: center;
+  opacity: 0.85;
+  transition: var(--transition);
 }
 
 .profile_name .contact_info a:hover {
-  color: white;
+  opacity: 1;
   text-decoration: underline;
 }
 
-/* Titles */
-h2 {
-  font-size: 50px;
-  text-align: center;
-  color: #004bbc;
-  margin: 30px 60px 0 60px;
+.contact_info img {
+  width: 18px;
+  margin-right: 8px;
+  filter: brightness(0) invert(1);
 }
 
-.introduction {
-  font-size: 30px;
+.nav-links {
+  display: flex;
+  gap: 15px;
+}
+
+.topmenu {
+  color: rgba(255,255,255,0.8);
+  font-size: 18px;
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: var(--transition);
+}
+
+.topmenu:hover {
+  color: var(--white);
+  background-color: var(--secondary-color);
+}
+
+/* Section Common */
+section {
+  padding: 80px 10%;
+}
+
+h2 {
+  font-size: 40px;
   text-align: center;
-  margin: 30px 0 20px 0;
-  animation-duration: 5s;
+  color: var(--primary-color);
+  margin-bottom: 50px;
   position: relative;
 }
 
+h2::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: var(--primary-color);
+  margin: 15px auto 0;
+  border-radius: 2px;
+}
+
 /* About Me */
-.container {
+#about-me {
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 50px;
   align-items: center;
-  gap: 20px;
+  background-color: #fff;
 }
 
 .image-container {
-  text-align: center;
-  width: 100%;
-  margin-top: 50px;
-  padding-left: 50px;
-}
-
-.image-description {
-  display: block;
-  text-align: center;
-  width: 100%;
-  margin-top: 10px;
-  color: #555;
-  font-size: 14px;
+  position: relative;
 }
 
 .profile_image {
   width: 100%;
-  height: auto;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
 }
 
-.about-me-text {
+.profile_image:hover {
+  transform: translateY(-5px);
+}
+
+.about-me-text h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.about-me-text p {
   font-size: 18px;
-  line-height: 1.6;
-  padding: 20px 80px;
-  margin: auto;
   text-align: justify;
-  max-width: 1000px;
-}
-
-@media (max-width: 768px) {
-  .container {
-    flex-wrap: wrap;
-  }
-  
-  .image-container {
-    flex: 1 1 100%;
-    text-align: center;
-    margin-top: 15px;
-  }
-
-  .about-me-text {
-    text-align: justify;
-    max-width: 100%;
-    margin-right: 0;
-    font-size: 16px;
-    padding: 10px;
-  }
 }
 
 /* Skills */
+#skills {
+  background-color: var(--light-gray);
+}
+
 .all_skills {
-  display: flex;
-  justify-content: center; /* 讓卡片居中 */
-  flex-wrap: wrap;
-  gap: 20px; /* 增加卡片之間的間距 */
-  padding: 0 20px; /* 增加左右內邊距 */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
 }
 
 .skill {
-  border: 1px solid gray;
-  border-radius: 6px;
+  background: var(--white);
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
   text-align: center;
-  margin: 20px; /* 調整外邊距 */
-  padding: 20px; /* 調整內邊距 */
-  width: 280px; /* 固定卡片寬度 */
-  font-size: 20px;
-  box-shadow: 0 3px 10px gray;
-  background-color: #fff; /* 添加背景色 */
+  transition: var(--transition);
+}
+
+.skill:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
 }
 
 .skill h6 {
-  font-size: 22px; /* 調整標題字體大小 */
-  font-weight: bold;
-  margin-bottom: 10px;
+  font-size: 20px;
+  margin-bottom: 15px;
+  color: var(--primary-color);
 }
 
 .skill p {
-  font-size: 16px; /* 調整文字字體大小 */
-  color: gray;
-  margin: 0; /* 移除默認的上下邊距 */
+  font-size: 15px;
+  color: #666;
 }
 
-/* Projects */
-.achievements-container {
-  margin: 30px 0 0 60px;
-}
-
-.achievements-container hr {
-  border: 1px solid lightgray;
-  width: 75%;
-  margin-left: 5cm;
-}
-
+/* Achievements */
 .achievement-card {
-  margin: 0 15px 15px 30px;
-  padding-bottom: 5px;
+  background: var(--white);
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
 }
 
 .achievement-card h3 {
-  font-size: 25px;
-  margin-left: 30px;
-}
-
-.achievement-card li {
-  font-size: 20px;
-  margin-left: 30px;
-}
-
-/* Experience */
-.all_experience {
-  display: flex;
-  flex-direction: column;
-  margin-left: 60px;
-}
-
-.experience {
-  border: 1px solid gray;
-  background-color: #f9f9f9;
-  border-radius: 8px;
-  box-shadow: 0 3px 10px gray;
-  padding: 20px;
-  margin: 20px 0;
-}
-
-.experience h3 {
   font-size: 24px;
-  color: #004bbc;
+  margin-bottom: 20px;
 }
 
-.experience p {
-  font-size: 18px;
-  font-weight: bold;
-  margin: 10px 0;
-}
-
-.experience ul {
-  list-style-type: disc;
-  margin-left: 20px;
-}
-
-.experience ul li {
-  font-size: 16px;
-  margin: 5px 0;
-}
-
-/* Certificates */
-#certificates {
-  margin: 30px 60px;
-  text-align: center;
-}
-
-.all_certificates {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-  padding: 20px 0;
-}
-
-.certificate {
-  border: 1px solid gray;
-  border-radius: 6px;
-  padding: 20px;
-  width: 280px;
-  background-color: #fff;
-  box-shadow: 0 3px 10px gray;
-}
-
-.certificate h3 {
-  font-size: 20px;
-  color: #004bbc;
-  margin-bottom: 10px;
-}
-
-.certificate p {
-  font-size: 16px;
-  color: gray;
-  margin-bottom: 10px;
-}
-
-.certificate a {
-  color: #004bbc;
+.achievement-card a {
+  display: inline-block;
+  margin-top: 10px;
+  color: var(--primary-color);
+  font-weight: 600;
   text-decoration: none;
 }
 
-.certificate a:hover {
-  text-decoration: underline;
+/* Experience */
+.experience {
+  background: var(--white);
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  margin-bottom: 30px;
+  border-left: 5px solid var(--primary-color);
+  transition: var(--transition);
 }
 
-/* Scroll to Top Button */
+.experience:hover {
+  transform: translateX(10px);
+}
+
+.experience h3 {
+  font-size: 22px;
+  color: var(--primary-color);
+  margin: 0;
+}
+
+.experience p {
+  font-weight: 600;
+  margin: 10px 0;
+  color: #555;
+}
+
+/* Certificates */
+.all_certificates {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+.certificate {
+  background: var(--white);
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  text-align: center;
+  transition: var(--transition);
+}
+
+.certificate:hover {
+  transform: scale(1.05);
+}
+
+.certificate a {
+  display: block;
+  margin-top: 15px;
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* Animations */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease-out;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  #about-me {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  
+  .nav-links {
+    display: none; /* Simplification for prototype */
+  }
+  
+  section {
+    padding: 60px 5%;
+  }
+}
+
+/* Floating Action Button */
 .iconbutton {
-  width: 48px;
-  height: 48px;
-  border-radius: 100%;
-  background-color: #7600bc;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+  box-shadow: var(--shadow);
   display: flex;
   align-items: center;
   justify-content: center;
   position: fixed;
-  right: 3%;
-  bottom: 3%;
+  right: 30px;
+  bottom: 30px;
   cursor: pointer;
+  z-index: 999;
+  transition: var(--transition);
 }
 
-/* Form Pop-up */
-.popup {
-  width: 400px;
-  background-color: #e8bcf0;
-  border-radius: 3mm;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  position: fixed;
-  visibility: hidden;
-}
-
-.popup img {
-  padding-top: 20px;
-}
-
-.popup button {
-  background-color: #fff;
-  border: 1px solid #7600bc;
-  color: #7600bc;
-  border-radius: 6px;
-  text-align: center;
-  padding: 10px;
-  width: 2in;
-  font-size: 20px;
-  margin: 50px auto;
-}
-
-.popup button:hover {
-  background-color: #fff;
-  border: 2px solid #7600bc;
-  color: #7600bc;
-  font-weight: bolder;
-  cursor: pointer;
+.iconbutton:hover {
+  background-color: var(--secondary-color);
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.2);
 }
